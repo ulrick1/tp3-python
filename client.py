@@ -58,7 +58,7 @@ class MainWindow(QWidget):
         else:
             res = self.__query(hostname, ip, api_key)
             if res:
-                self.label2.setText("Answer%s" % (res))
+                self.label2.setText(" %s \n %s" % (res["Longitude"], res["Latitude"]))
                 self.label2.adjustSize()
                 self.show()
 
