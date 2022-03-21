@@ -1,0 +1,5 @@
+1. Un service web est un protocole d'interface informatique de la famille des technologies web permettant la communication et l'échange de données entre applications et systèmes hétérogènes dans des environnements distribués.
+
+2. Une API REST (également appelée API RESTful) est une interface de programmation d'application (API ou API web) qui respecte les contraintes du style d'architecture REST et permet d'interagir avec les services web RESTful. L'architecture REST (Representational State Transfer) a été créée par l'informaticien Roy Fielding.
+
+3.FastAPI est un framework Web pour développer des API RESTful en Python. FastAPI est basé sur Pydantic et des indications de type pour valider, sérialiser et désérialiser les données, et générer automatiquement des documents OpenAPI.
