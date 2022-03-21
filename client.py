@@ -50,18 +50,20 @@ class MainWindow(QWidget):
 
     def on_click(self):
         hostname = self.text.text()
+        ip = self.text4.text()
+        api_key= self.text3.text()
 
         if hostname == "":
             QMessageBox.about(self, "Error", "Please fill the field")
         else:
-            res = self.__query(hostname)
+            res = self.__query(hostname, ip, api_key)
             if res:
-                self.label2.setText("Answer%s" % (res["Hello"]))
+                self.label2.setText("Answer%s" % (res))
                 self.label2.adjustSize()
                 self.show()
 
-    def __query(self, hostname):
-        url = "http://%s" % (hostname)
+    def __query(self, hostname, ip, api_key):
+        url = "http://%s/ip/%s?key=%s" % (hostname, ip , api_key)
         r = requests.get(url)
         if r.status_code == requests.codes.NOT_FOUND:
             QMessageBox.about(self, "Error", "IP not found")
