@@ -6,7 +6,7 @@ app = FastAPI()
 @app.get("/")
 async def read_root():
     return {"Hello": "World"}
-    
+
 
 from shodan import Shodan
 
